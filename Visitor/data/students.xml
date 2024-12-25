@@ -1,0 +1,14 @@
+<Students>
+    <Student>
+        <ID>DH79</ID>
+        <FullName>Lâm Ngọc Hân</FullName>
+        <Gender>Female</Gender>
+        <YearOfBirth>2006</YearOfBirth>
+    </Student>
+    <Student>
+        <ID>DH05</ID>
+        <FullName>Nguyễn Thị Thu Lài</FullName>
+        <Gender>Female</Gender>
+        <YearOfBirth>2006</YearOfBirth>
+    </Student>
+</Students>
