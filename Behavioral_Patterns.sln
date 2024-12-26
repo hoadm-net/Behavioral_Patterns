@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iterator", "Iterator\Iterat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Memento", "Memento\Memento.csproj", "{CB3353A9-ABB8-4C0E-8DB1-E6770F8A50BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "State", "State\State.csproj", "{175EC960-39B3-4DEA-9DB7-EACB5E714FFA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{CB3353A9-ABB8-4C0E-8DB1-E6770F8A50BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB3353A9-ABB8-4C0E-8DB1-E6770F8A50BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CB3353A9-ABB8-4C0E-8DB1-E6770F8A50BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{175EC960-39B3-4DEA-9DB7-EACB5E714FFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{175EC960-39B3-4DEA-9DB7-EACB5E714FFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{175EC960-39B3-4DEA-9DB7-EACB5E714FFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{175EC960-39B3-4DEA-9DB7-EACB5E714FFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
