@@ -1,11 +1,11 @@
 ﻿namespace Command;
 
-class Program
+internal class Program
 {
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
-        TodoList todoList = new TodoList();
-        TaskManager taskManager = new TaskManager();
+        var todoList = new TodoList();
+        var taskManager = new TaskManager();
 
         // Add new tasks
         ICommand addTask1 = new AddTaskCommand(todoList, "Buy groceries");
@@ -23,6 +23,5 @@ class Program
         ICommand removeTask = new RemoveTaskCommand(todoList, "Finish homework");
         taskManager.ExecuteCommand(removeTask); // Output: Task removed: Finish homework
         todoList.ShowTasks();
-        
     }
 }

@@ -2,15 +2,8 @@ namespace Memento.classes;
 
 public class Game
 {
-    private GameHistory _history;
-    private int Width { get; }
-    private int Height { get; }
-    private Snake Player { get; set; }
-    private Food Food { get; set; }
-    private bool GameOver { get; set; }
-    private int Score { get; set; }
-    
-    const int SaveInterval = 2; // Cứ mỗi 5 điểm sẽ lưu trạng thá
+    private const int SaveInterval = 2; // Cứ mỗi 5 điểm sẽ lưu trạng thá
+    private readonly GameHistory _history;
 
     public Game(int width, int height)
     {
@@ -20,12 +13,19 @@ public class Game
         Food = new Food(width, height);
         GameOver = false;
         Score = 0;
-        
+
         _history = new GameHistory();
-        
+
         Player.OnEatFood += HandleEatFood;
         Player.OnEatFood += HandleEatFoodSound;
     }
+
+    private int Width { get; }
+    private int Height { get; }
+    private Snake Player { get; }
+    private Food Food { get; }
+    private bool GameOver { get; set; }
+    private int Score { get; set; }
 
     private void HandleEatFood(object? sender, EventArgs e)
     {
@@ -33,10 +33,7 @@ public class Game
         Player.Grow();
         Food.Generate(Player.Body);
 
-        if (Score % SaveInterval == 0)
-        {
-            _history.Save(this.GetGameState());
-        }
+        if (Score % SaveInterval == 0) _history.Save(GetGameState());
     }
 
     private void HandleEatFoodSound(object? sender, EventArgs e)
@@ -56,17 +53,18 @@ public class Game
             Logic();
             Thread.Sleep(300);
         }
+
         Console.Clear();
         Console.WriteLine($"Game Over! Final Score: {Score}");
-        
-        GameState lastState = _history.GetLastState();
+
+        var lastState = _history.GetLastState();
         if (lastState != null)
-        {   
+        {
             Console.Write("Do you want to play again? (y/n)");
-            string user_input = Console.ReadLine();
+            var user_input = Console.ReadLine();
             if (user_input.Trim().ToLower() == "y")
             {
-                this.RestoreState(lastState);
+                RestoreState(lastState);
                 GameOver = false;
                 Console.Clear();
                 goto start_game;
@@ -104,17 +102,14 @@ public class Game
             return;
         }
 
-        if (Player.Head.Equals(Food.Position))
-        {
-            Player.TriggerEatFood();
-        }
+        if (Player.Head.Equals(Food.Position)) Player.TriggerEatFood();
     }
 
     public GameState GetGameState()
     {
         return new GameState(Score, Player.Direction, Player.Body);
     }
-    
+
     public void RestoreState(GameState state)
     {
         Score = state.GameScore;

@@ -10,6 +10,7 @@ public class OAuthAuthentication : IAuthenticationStrategy
             Console.WriteLine("Authenticated using OAuth.");
             return true;
         }
+
         return false;
     }
 }

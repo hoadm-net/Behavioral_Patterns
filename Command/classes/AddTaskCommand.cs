@@ -2,8 +2,8 @@ namespace Command;
 
 public class AddTaskCommand : ICommand
 {
-    private readonly TodoList _todoList;
     private readonly string _taskDescription;
+    private readonly TodoList _todoList;
 
     public AddTaskCommand(TodoList todoList, string taskDescription)
     {
@@ -15,5 +15,4 @@ public class AddTaskCommand : ICommand
     {
         _todoList.AddTask(_taskDescription);
     }
-    
 }

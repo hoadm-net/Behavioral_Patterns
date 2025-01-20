@@ -3,7 +3,7 @@ namespace Memento.classes;
 // CareTaker    
 public class GameHistory
 {
-    private Stack<GameState> _history = new Stack<GameState>();
+    private readonly Stack<GameState> _history = new();
 
     public void Save(GameState state)
     {

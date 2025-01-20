@@ -2,11 +2,11 @@
 
 namespace Strategy;
 
-class Program
+internal class Program
 {
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
-        AuthenticationSystem authSystem = new AuthenticationSystem();
+        var authSystem = new AuthenticationSystem();
 
         // Authenticate using Username and Password
         authSystem.SetAuthenticationStrategy(new UsernamePasswordAuthentication());

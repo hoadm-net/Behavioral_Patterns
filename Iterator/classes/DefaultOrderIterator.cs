@@ -19,6 +19,7 @@ public class DefaultOrderIterator : IIterator<Student>
             _position++;
             return true;
         }
+
         return false;
     }
 

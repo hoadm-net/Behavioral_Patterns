@@ -2,12 +2,12 @@
 
 namespace State;
 
-class Program
+internal class Program
 {
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
         // Create a smart home system
-        HomeSystem home = new HomeSystem();
+        var home = new HomeSystem();
 
         Console.WriteLine("== Scenario 1: Owner is at home ==");
         home.Notify("Front door opened.");

@@ -2,12 +2,12 @@ namespace Observer.classes;
 
 public class MotionSensor : IMotionSensor
 {
-    private List<IDevice> _devices = new List<IDevice>();
+    private readonly List<IDevice> _devices = new();
     private bool _isMotionDetected;
 
     public bool IsMotionDetected
     {
-        get { return _isMotionDetected; }
+        get => _isMotionDetected;
         set
         {
             _isMotionDetected = value;
@@ -27,9 +27,6 @@ public class MotionSensor : IMotionSensor
 
     public void Notify()
     {
-        foreach (var device in _devices)
-        {
-            device.Update(_isMotionDetected);
-        }
+        foreach (var device in _devices) device.Update(_isMotionDetected);
     }
 }

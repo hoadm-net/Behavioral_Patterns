@@ -2,11 +2,11 @@
 
 namespace Memento;
 
-class Program
+internal class Program
 {
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
-        Game game = new Game(40, 10);
+        var game = new Game(40, 10);
         game.Start();
     }
 }

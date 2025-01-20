@@ -2,17 +2,17 @@
 
 namespace Observer;
 
-class Program
+internal class Program
 {
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
         // MotionSensor - Subject
-        MotionSensor sensor = new MotionSensor();
+        var sensor = new MotionSensor();
 
         // Smart devices - Observers
-        SmartLight light = new SmartLight();
-        SecurityCamera camera = new SecurityCamera();
-        Alarm alarm = new Alarm();
+        var light = new SmartLight();
+        var camera = new SecurityCamera();
+        var alarm = new Alarm();
 
         // Register
         sensor.Attach(light);

@@ -2,18 +2,18 @@ namespace Memento.classes;
 
 public class Snake
 {
-    public List<(int x, int y)> Body { get; set; }
-    public string Direction { get; set; }
-
-    public (int x, int y) Head => Body.First();
-    
-    public event EventHandler OnEatFood;
-
     public Snake(int startX, int startY)
     {
         Body = new List<(int x, int y)> { (startX, startY) };
         Direction = "RIGHT";
     }
+
+    public List<(int x, int y)> Body { get; set; }
+    public string Direction { get; set; }
+
+    public (int x, int y) Head => Body.First();
+
+    public event EventHandler OnEatFood;
 
     public void Draw()
     {
@@ -68,7 +68,7 @@ public class Snake
                Head.y <= 0 || Head.y >= height - 1 ||
                Body.Skip(1).Contains(Head);
     }
-    
+
     public void TriggerEatFood()
     {
         OnEatFood?.Invoke(this, EventArgs.Empty);

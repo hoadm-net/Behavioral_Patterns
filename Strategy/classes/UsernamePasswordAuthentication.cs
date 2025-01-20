@@ -11,6 +11,7 @@ public class UsernamePasswordAuthentication : IAuthenticationStrategy
             Console.WriteLine("Authenticated using Username and Password.");
             return true;
         }
+
         return false;
     }
 }

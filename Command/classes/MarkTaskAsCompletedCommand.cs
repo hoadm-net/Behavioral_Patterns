@@ -2,8 +2,8 @@ namespace Command;
 
 public class MarkTaskAsCompletedCommand : ICommand
 {
-    private readonly TodoList _todoList;
     private readonly string _taskDescription;
+    private readonly TodoList _todoList;
 
     public MarkTaskAsCompletedCommand(TodoList todoList, string taskDescription)
     {

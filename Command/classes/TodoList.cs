@@ -2,7 +2,7 @@ namespace Command;
 
 public class TodoList
 {
-    private readonly List<Task> _tasks = new List<Task>();
+    private readonly List<Task> _tasks = new();
 
     public void AddTask(string taskDescription)
     {
@@ -44,7 +44,7 @@ public class TodoList
         Console.WriteLine("Current tasks:");
         foreach (var task in _tasks)
         {
-            string status = task.IsCompleted ? "Completed" : "Doing";
+            var status = task.IsCompleted ? "Completed" : "Doing";
             Console.WriteLine($"- {task.Description} [{status}]");
         }
 

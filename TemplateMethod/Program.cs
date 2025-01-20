@@ -2,9 +2,9 @@
 
 namespace TemplateMethod;
 
-class Program
+internal class Program
 {
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
         Console.WriteLine("Processing physical product order:");
         OrderProcessing physicalOrder = new PhysicalProductOrder();

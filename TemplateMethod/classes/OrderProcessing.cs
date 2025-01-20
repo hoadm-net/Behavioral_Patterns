@@ -6,7 +6,7 @@ public abstract class OrderProcessing
     {
         ValidateOrder();
         ProcessPayment();
-        HandleShipping();  // Phần này có thể thay đổi tùy vào loại sản phẩm
+        HandleShipping(); // Phần này có thể thay đổi tùy vào loại sản phẩm
         UpdateOrderStatus();
     }
 

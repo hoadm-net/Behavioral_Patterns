@@ -1,5 +1,20 @@
 [
-  { "ID": "DH19", "FullName": "PHÙNG VĨ PHÚC", "Gender": "Male", "YearOfBirth": 2006 },
-  { "ID": "DH39", "FullName": "Nguyễn Ý Linh", "Gender": "Female", "YearOfBirth": 2006 },
-  { "ID": "DH44", "FullName": "Nguyễn Thị Thu Lài", "Gender": "Female", "YearOfBirth": 2006 }
+  {
+    "ID": "DH19",
+    "FullName": "PHÙNG VĨ PHÚC",
+    "Gender": "Male",
+    "YearOfBirth": 2006
+  },
+  {
+    "ID": "DH39",
+    "FullName": "Nguyễn Ý Linh",
+    "Gender": "Female",
+    "YearOfBirth": 2006
+  },
+  {
+    "ID": "DH44",
+    "FullName": "Nguyễn Thị Thu Lài",
+    "Gender": "Female",
+    "YearOfBirth": 2006
+  }
 ]

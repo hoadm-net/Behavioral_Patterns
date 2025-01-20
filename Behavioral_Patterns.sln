@@ -16,6 +16,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Memento", "Memento\Memento.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "State", "State\State.csproj", "{175EC960-39B3-4DEA-9DB7-EACB5E714FFA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediator", "Mediator\Mediator.csproj", "{3250A3CE-0273-49BD-963A-20473156CA81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainOfResponsibility", "ChainOfResponsibility\ChainOfResponsibility.csproj", "{6C92E423-2722-4EFF-967A-F350C76DE13D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,5 +58,13 @@ Global
 		{175EC960-39B3-4DEA-9DB7-EACB5E714FFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{175EC960-39B3-4DEA-9DB7-EACB5E714FFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{175EC960-39B3-4DEA-9DB7-EACB5E714FFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3250A3CE-0273-49BD-963A-20473156CA81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3250A3CE-0273-49BD-963A-20473156CA81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3250A3CE-0273-49BD-963A-20473156CA81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3250A3CE-0273-49BD-963A-20473156CA81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C92E423-2722-4EFF-967A-F350C76DE13D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C92E423-2722-4EFF-967A-F350C76DE13D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C92E423-2722-4EFF-967A-F350C76DE13D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C92E423-2722-4EFF-967A-F350C76DE13D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

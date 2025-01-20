@@ -10,6 +10,7 @@ public class FingerprintAuthentication : IAuthenticationStrategy
             Console.WriteLine("Authenticated using Fingerprint.");
             return true;
         }
+
         return false;
     }
 }

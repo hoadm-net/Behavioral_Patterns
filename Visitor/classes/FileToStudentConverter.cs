@@ -5,13 +5,13 @@ namespace Visitor.classes;
 
 public class FileToStudentConverter : IFileVisitor
 {
-    public List<Student> Students { get; } = new List<Student>();
+    public List<Student> Students { get; } = new();
 
     public void Visit(TextFile textFile)
     {
         Console.WriteLine($"Reading Text File: {textFile.FilePath}");
         var lines = File.ReadAllLines(textFile.FilePath);
-        for (int i = 0; i < lines.Length; i += 4)
+        for (var i = 0; i < lines.Length; i += 4)
         {
             string[] data = lines[i].Split(',');
             Students.Add(new Student
@@ -29,10 +29,7 @@ public class FileToStudentConverter : IFileVisitor
         Console.WriteLine($"Reading JSON File: {jsonFile.FilePath}");
         var content = File.ReadAllText(jsonFile.FilePath);
         var students = JsonSerializer.Deserialize<List<Student>>(content);
-        if (students != null)
-        {
-            Students.AddRange(students);
-        }
+        if (students != null) Students.AddRange(students);
     }
 
     public void Visit(XmlFile xmlFile)
@@ -41,7 +38,6 @@ public class FileToStudentConverter : IFileVisitor
         var xDoc = XDocument.Load(xmlFile.FilePath);
         var elements = xDoc.Descendants("Student");
         foreach (var element in elements)
-        {
             Students.Add(new Student
             {
                 ID = element.Element("ID")?.Value,
@@ -49,6 +45,5 @@ public class FileToStudentConverter : IFileVisitor
                 Gender = element.Element("Gender")?.Value,
                 YearOfBirth = int.Parse(element.Element("YearOfBirth")?.Value)
             });
-        }
     }
 }

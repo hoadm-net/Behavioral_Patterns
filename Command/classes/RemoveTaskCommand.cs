@@ -2,8 +2,8 @@ namespace Command;
 
 public class RemoveTaskCommand : ICommand
 {
-    private readonly TodoList _todoList;
     private readonly string _taskDescription;
+    private readonly TodoList _todoList;
 
     public RemoveTaskCommand(TodoList todoList, string taskDescription)
     {
